@@ -1,6 +1,6 @@
 {
   "name": "electron-kiosk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Electron-based Kiosk",
   "private": true,
   "author": {
@@ -38,6 +38,7 @@
       "node_modules"
     ],
     "win": {
+      "publish": "never",
       "asar": true,
       "publisherName": "John Murphy",
       "target": [
