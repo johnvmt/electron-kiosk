@@ -1,0 +1,54 @@
+{
+  "name": "electron-kiosk",
+  "version": "0.0.1",
+  "description": "Electron-based Kiosk",
+  "private": true,
+  "author": {
+    "name": "John Murphy-Teixidor",
+    "email": "johnvmt@gmail.com"
+  },
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-builder": "^20.38.4"
+  },
+  "dependencies": {
+    "command-line-args": "4.0.x",
+    "command-line-usage": "4.0.x",
+    "robotjs": "^0.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnvmt/electron-kiosk"
+  },
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder build --win"
+  },
+  "build": {
+    "productName": "Electron Kiosk",
+    "appId": "com.johnmurphyteixidor.kiosk",
+    "asar": true,
+    "extraResources": [
+      "node_modules/"
+    ],
+    "asarUnpack": [
+      "node_modules"
+    ],
+    "win": {
+      "asar": true,
+      "publisherName": "John Murphy",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "installerIcon": "build/icon.ico"
+    }
+  }
+}
