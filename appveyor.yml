@@ -1,5 +1,9 @@
 image: Visual Studio 2017
 
+environment:
+  GH_TOKEN:
+    secure: 6rqYqTWWocrx45Pb827mB6BJxougvQn/QabUVH2N5e6pyecrRMDKKlfOBJo6BtjS
+
 platform:
   - x64
 
