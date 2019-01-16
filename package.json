@@ -1,6 +1,6 @@
 {
   "name": "electron-kiosk",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "Electron-based Kiosk",
   "private": true,
   "author": {
