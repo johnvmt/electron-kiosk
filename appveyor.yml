@@ -10,6 +10,7 @@ environment:
 cache:
   - node_modules
   - '%USERPROFILE%\.electron'
+  - '%LOCALAPPDATA%\electron-builder'
 
 init:
   - git config --global core.autocrlf input
@@ -22,7 +23,7 @@ build_script:
   - yarn dist
 
 artifacts:
-  - path: subdir\*.exe
+  - path: dist\*.exe
     name: installer
 
 deploy:
