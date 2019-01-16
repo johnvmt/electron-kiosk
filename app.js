@@ -15,7 +15,7 @@ app.setLoginItemSettings({
 var robot = require("robotjs");
 
 // Speed up the mouse.
-robot.setMouseDelay(2);
+robot.setMouseDelay(1);
 
 var twoPI = Math.PI * 2.0;
 var screenSize = robot.getScreenSize();
